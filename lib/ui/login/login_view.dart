@@ -13,7 +13,7 @@ class LoginView extends StatelessWidget {
 
   onLogin() {
     if (emailController.text.isEmpty || passwordController.text.isEmpty) {
-      CoreFunction.showToast("Unknown Action");
+      CoreFunction.showToast("Please fill Email & Password");
     } else if (emailController.text != Constant.adminEmail) {
       CoreFunction.showToast("Wrong Email");
     } else if (passwordController.text != Constant.adminPassword) {
