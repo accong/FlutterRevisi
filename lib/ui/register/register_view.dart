@@ -17,7 +17,7 @@ class Register extends StatelessWidget {
 
   onRegister() {
     if (formKey.currentState!.validate()) {
-      CoreFunction.showToast("Berhasil Regist",
+      CoreFunction.showToast("Regist Succes",
           backgroundColor: ColorPalette.white);
       // routePush(const HomeView(), RouterType.material);
     } else {
@@ -51,10 +51,10 @@ class Register extends StatelessWidget {
                       iconPrefix: Icons.email),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return 'masukkan username';
+                      return 'Enter your username';
                     }
                     if (value.length < 8) {
-                      return 'data tidak lengkap';
+                      return 'please fill';
                     }
                     return null;
                   },
@@ -71,10 +71,10 @@ class Register extends StatelessWidget {
                       iconPrefix: Icons.email),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return 'masukkan email';
+                      return 'Enter your email';
                     }
                     if (value.length < 8) {
-                      return 'data tidak lengkap';
+                      return 'please fill';
                     }
                     return null;
                   },
@@ -91,10 +91,10 @@ class Register extends StatelessWidget {
                       iconPrefix: Icons.lock),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return 'masukan phone number';
+                      return 'Enter your phone number';
                     }
                     if (value.length < 8) {
-                      return 'password kurang dari 8 karakter';
+                      return 'please fill';
                     }
                     return null;
                   },
@@ -112,7 +112,7 @@ class Register extends StatelessWidget {
                       iconPrefix: Icons.lock),
                   validator: (value) {
                     if (value!.isEmpty) {
-                      return 'masukan password';
+                      return 'Enter your password';
                     }
                     if (value.length < 8) {
                       return 'please fill';
