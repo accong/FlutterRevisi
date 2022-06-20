@@ -12,17 +12,18 @@ class LoginView extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
 
   onLogin() {
-    // if(emailController.text.isEmpty || passwordController.text.isEmpty){
-    //   CoreFunction.showToast("Form tidak boleh kosong");
-    // } else if (emailController.text != Constant.adminEmail) {
-    //   CoreFunction.showToast("Email salah");
-    // } else if (passwordController.text != Constant.adminPassword) {
-    //   CoreFunction.showToast("Password Salah");
-    // } else if (emailController.text == Constant.adminEmail &&passwordController.text == Constant.adminPassword){
-    pushAndRemoveUntil(Dashboard(), RouterType.material);
-    // } else {
-    //   CoreFunction.showToast("Uknow Action");
-    // }
+    if (emailController.text.isEmpty || passwordController.text.isEmpty) {
+      CoreFunction.showToast("Unknown Action");
+    } else if (emailController.text != Constant.adminEmail) {
+      CoreFunction.showToast("Wrong Email");
+    } else if (passwordController.text != Constant.adminPassword) {
+      CoreFunction.showToast("Wrong Password");
+    } else if (emailController.text == Constant.adminEmail &&
+        passwordController.text == Constant.adminPassword) {
+      pushAndRemoveUntil(Dashboard(), RouterType.material);
+    } else {
+      CoreFunction.showToast("Unknown Action");
+    }
   }
 
   @override
