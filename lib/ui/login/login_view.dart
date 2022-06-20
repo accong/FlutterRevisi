@@ -6,13 +6,12 @@ import 'package:tripkuy/ui/dashboard/view/dashboard.dart';
 import 'package:tripkuy/ui/register/register_view.dart';
 
 class LoginView extends StatelessWidget {
-
-  LoginView({ Key? key }) : super(key: key);
+  LoginView({Key? key}) : super(key: key);
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
-  onLogin(){
+  onLogin() {
     // if(emailController.text.isEmpty || passwordController.text.isEmpty){
     //   CoreFunction.showToast("Form tidak boleh kosong");
     // } else if (emailController.text != Constant.adminEmail) {
@@ -20,7 +19,7 @@ class LoginView extends StatelessWidget {
     // } else if (passwordController.text != Constant.adminPassword) {
     //   CoreFunction.showToast("Password Salah");
     // } else if (emailController.text == Constant.adminEmail &&passwordController.text == Constant.adminPassword){
-      pushAndRemoveUntil(Dashboard(), RouterType.material);
+    pushAndRemoveUntil(Dashboard(), RouterType.material);
     // } else {
     //   CoreFunction.showToast("Uknow Action");
     // }
@@ -50,48 +49,60 @@ class LoginView extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Component.textBold(
-                    "Welcome Back!",
-                    fontSize: 16,
-                    colors: ColorPalette.black
+                  Component.textBold("Welcome Back!",
+                      fontSize: 16, colors: ColorPalette.black),
+                  const SizedBox(
+                    height: 20,
                   ),
-                  const SizedBox(height: 20,),
                   Image.asset(
                     "assets/images/image_login.png",
                     width: SizeConfig.blockSizeHorizontal * 50,
                     height: SizeConfig.blockSizeHorizontal * 50,
                   ),
-                  const SizedBox(height: 20,),
-                  TextField(
-                    keyboardType: TextInputType.text,
-                    textInputAction: TextInputAction.next,
-                    controller: emailController,
-                    style: const TextStyle(fontSize: 14, color: ColorPalette.grey),
-                    decoration: Component.decorationNoBorder("Email", iconPrefix: Icons.email)
+                  const SizedBox(
+                    height: 20,
                   ),
-                  const SizedBox(height: 20,),
                   TextField(
-                    keyboardType: TextInputType.text,
-                    textInputAction: TextInputAction.done,
-                    controller: passwordController,
-                    style: const TextStyle(fontSize: 14, color: ColorPalette.grey),
-                    decoration: Component.decorationNoBorder("Password", iconPrefix: Icons.lock)
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.next,
+                      controller: emailController,
+                      style: const TextStyle(
+                          fontSize: 14, color: ColorPalette.black),
+                      decoration: Component.decorationNoBorder("Email",
+                          iconPrefix: Icons.email)),
+                  const SizedBox(
+                    height: 20,
                   ),
-                  const SizedBox(height: 20,),
-                  Component.button(label: "Log in", onPressed: (){
-                    onLogin();
-                  }),
-                  const SizedBox(height: 15,),
+                  TextField(
+                      obscureText: true,
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.done,
+                      controller: passwordController,
+                      style: const TextStyle(
+                          fontSize: 14, color: ColorPalette.black),
+                      decoration: Component.decorationNoBorder("Password",
+                          iconPrefix: Icons.lock)),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Component.button(
+                      label: "Log in",
+                      onPressed: () {
+                        onLogin();
+                      }),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Component.textDefault("Don't have an account ? "),
                       InkWell(
-                        onTap: () {
-                          routePush(Register(), RouterType.material);
-                        },
-                        child: Component.textBold("Sign Up", colors: ColorPalette.blue)
-                      ),
+                          onTap: () {
+                            routePush(Register(), RouterType.material);
+                          },
+                          child: Component.textBold("Sign Up",
+                              colors: ColorPalette.blue)),
                     ],
                   )
                 ],
