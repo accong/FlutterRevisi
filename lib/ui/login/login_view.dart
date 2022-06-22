@@ -99,11 +99,12 @@ class LoginView extends StatelessWidget {
                     children: [
                       Component.textDefault("Don't have an account ? "),
                       InkWell(
-                          onTap: () {
-                            routePush(Register(), RouterType.material);
-                          },
-                          child: Component.textBold("Sign Up",
-                              colors: ColorPalette.blue)),
+                        onTap: () {
+                          routePush(Register(), RouterType.material);
+                        },
+                        child: Component.textBold("Sign Up",
+                            colors: ColorPalette.blue),
+                      ),
                     ],
                   )
                 ],
