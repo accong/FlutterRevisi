@@ -88,12 +88,12 @@ class Constant {
         price: CoreFunction.moneyFormatter(2000000),
         tourguide: "Chairil"),
     Destination(
-        nama: "Jakarta",
+        nama: "Taman Mini Indonesia",
         catering: "Makanan",
         desc:
             "Jakarta, Indonesia's massive capital, sits on the northwest coast of the island of Java. A historic mix of cultures – Javanese, Malay, Chinese, Arab, Indian and European – has influenced its architecture, language and cuisine. The old town, Kota Tua, is home to Dutch colonial buildings, Glodok (Jakarta’s Chinatown) and the old port of Sunda Kelapa, where traditional wooden schooners dock. ― Google",
         image:
-            "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Jakarta_Skyline_Part_2.jpg/800px-Jakarta_Skyline_Part_2.jpg",
+            "https://akcdn.detik.net.id/visual/2021/04/08/wisata-tmii_169.jpeg?w=650",
         location: "Jakarta",
         price: CoreFunction.moneyFormatter(3000000),
         tourguide: "Rafi"),
