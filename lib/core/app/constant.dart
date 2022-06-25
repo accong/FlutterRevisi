@@ -107,5 +107,17 @@ class Constant {
         location: "Bali",
         price: CoreFunction.moneyFormatter(9000000),
         tourguide: "Purnama"),
+    Destination(
+        nama: "Barcode",
+        catering: "Makanan",
+        desc:
+            "Barcode is one of the most popular place in Bandung",
+        image:
+            "https://i.ibb.co/2tpPXhy/biliar.jpg",
+        location: "Bandung",
+        price: CoreFunction.moneyFormatter(9000000),
+        tourguide: "Purnama"),
   ];
+
+  
 }
