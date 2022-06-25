@@ -1,5 +1,4 @@
 
-
 import 'package:tripkuy/ui/landing/view/landing_view.dart';
 import 'package:tripkuy/ui/splashscreen/view/splashscreen_view.dart';
 import 'package:flutter/material.dart';
