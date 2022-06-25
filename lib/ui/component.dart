@@ -136,6 +136,36 @@ class Component {
     hintStyle: const TextStyle(fontSize: 13.0, color: ColorPalette.black, fontWeight: FontWeight.w500)
   );
 
+  static decorationBorder(String hint, {IconData? iconPrefix}) => InputDecoration(
+    // fillColor: ColorPalette.blueLight.withAlpha(50),
+    filled: true,
+    border: OutlineInputBorder(
+      borderSide: const BorderSide(color: Colors.black),
+      borderRadius: BorderRadius.circular(10)
+    ),
+    enabledBorder: OutlineInputBorder(
+      borderSide: const BorderSide(color: Colors.black),
+      borderRadius: BorderRadius.circular(10)
+    ),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(10.0),
+      borderSide: const BorderSide(color: ColorPalette.white),
+    ),
+    errorBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(10.0),
+      borderSide: const BorderSide(color: ColorPalette.white),
+    ),
+    // prefixIcon: iconPrefix != null ? Icon(
+    //   iconPrefix,
+    //   color: ColorPalette.black,
+    //   size: 30,
+    // ) : null,
+    counterText: "",
+    hintText: hint,
+    contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+    hintStyle: const TextStyle(fontSize: 13.0, color: ColorPalette.black, fontWeight: FontWeight.w500)
+  );
+
   static button({required String label, required VoidCallback? onPressed, Color color = ColorPalette.blue}){
     return ElevatedButton(
       style: ElevatedButton.styleFrom(

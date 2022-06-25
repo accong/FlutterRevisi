@@ -23,23 +23,40 @@ class SecondProfile extends StatelessWidget {
             children: [
               Component.textBold("Account Details", fontSize: 17),
               const SizedBox(
-                height: 100,
+                height: 20,
               ),
 
               const Icon(Icons.person, size: 100, color: ColorPalette.grey,),
               SizedBox(height: SizeConfig.blockSizeVertical * 5,),
-              Component.textBold("Naufal Aditya", fontSize: 20),
-              const SizedBox(
-                height: 20,
-              ),
-              Component.textBold("naufal@gmail.com", fontSize: 10),
-              const SizedBox(
-                height: 10,
-              ),
-               Component.textBold("08568959667", fontSize: 10),
-              const SizedBox(
-                height: 20,
-              ),
+              TextField(
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.next,
+                      style: const TextStyle(
+                          fontSize: 14, color: ColorPalette.black),
+                      decoration: Component.decorationBorder("Naufal Aditya",)),
+                  const SizedBox(
+                    height: 20,
+                  ),
+              TextField(
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.next,
+                      style: const TextStyle(
+                          fontSize: 14, color: ColorPalette.black),
+                      decoration: Component.decorationBorder("naufal@gmail.com",
+                          )),
+                  const SizedBox(
+                    height: 20,
+                  ),
+              TextField(
+                      keyboardType: TextInputType.text,
+                      textInputAction: TextInputAction.next,
+                      style: const TextStyle(
+                          fontSize: 14, color: ColorPalette.black),
+                      decoration: Component.decorationBorder("08568959667",
+                         )),
+                  const SizedBox(
+                    height: 20,
+                  ),
             ],
 
           ),
